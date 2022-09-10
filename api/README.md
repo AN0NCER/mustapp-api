@@ -28,7 +28,7 @@
   
 </details>
 
-# Authorization
+# Account
 
 <details>
   <summary>
@@ -99,22 +99,65 @@ curl "https://mustapp.com/api/acc/apple" \
 
 <details>
   <summary>
-    <img src="https://via.placeholder.com/15/f03c15/f03c15.png" /> <b>METHOD</b> - <i><code>url</code></i> - This is a web request template.
+    <h4><img src="https://via.placeholder.com/15/1ADFDF/1ADFDF.png" /> <b>PUT</b> - <i><code>/api/acc/google</code></i> - Loggin whith google.</h4>
   </summary>
-  
-  ### Request
+	
+ ### Request
  
-  **METHOD** ```https://localhost/url```
+  &emsp;&emsp;**PUT** ```https://mustapp.com/api/acc/google```
+	
+### Header
+	
+  - `Bearer: <token>`
   
-  ### Headers
-  
-  - `Bearer = token`
+<h4>Body</h4>
+	
+```js
+{
+  "force": false,
+  "authorization_code": "4/0AdQt8qghlCTOq_2eWDs-ft2zTaGI3mGUqNaJXjY6wTVe-LD6B_RqLMYcZiwUlGog93v7Vg"
+}
+```
+	
+<h4>Response</h4>
+	
+```js
+{
+  "name": "AN0NC6R",
+  "phone": "+380000000000",
+  "facebook_name": null,
+  "facebook_id": null,
+  "twitter_name": null,
+  "twitter_id": null,
+  "is_private": true,
+  "timezone": "Europe/Berlin",
+  "has_default_uri": false,
+  "store_country_code": "ua",
+  "cinema_country_code": "ua",
+  "prefered_language_code": "ru",
+  "gender": "male",
+  "image_uri": "/b250671a-3f42-4244-bce3-b14d951ff164.jpg",
+  "bio_message": null,
+  "links": {},
+  "google_id": "example@gmail.com",
+  "google_name": "Anoncer",
+  "is_youtube_linked": true,
+  "apple_id": null,
+  "apple_email": null,
+  "apple_name": null,
+  "id": 356592,
+  "uri": "MaximKov",
+  "is_anonymous": false
+}
+```
   
   ### Curl
   
-  ```curl
-  curl "https://localhost/url/" \
-	-H 'Bearer: <token>'
-  ```
+```curl
+curl "https://mustapp.com/api/acc/google" \
+	-X PUT \
+	-H 'Bearer: <token>' \
+	-d '{"force":false,"authorization_code":"4\/0AdQt8qghlCTOq_2eWDs-ft2zTaGI3mGUqNaJXjY6wTVe-LD6B_RqLMYcZiwUlGog93v7Vg"}'
+```
   
 </details>
