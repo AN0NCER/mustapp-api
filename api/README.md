@@ -1,5 +1,9 @@
 
-<h1> Mustapp API </h1><sup><code>1.0.0</code></sup>
+## **Mustapp API** <sup><code>1.0.0</code></sup>
+
+[Base URL: https://mustapp.com]
+
+This API was taken from the Mustapp application. To use requests, you need to specify Bearer which I designated as <token>
 
 <details>
 <summary>
@@ -7,16 +11,6 @@
 </summary>
 
 <table role="table">
- <thead>
-  <tr align="Left"><th colspan="2">Headers</th></tr>
-  <tr align="left"><th>Name</th><th>Description</th></tr>
- </thead>
- <tbody>
-  <tr>
-   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
-   <td>A unique token that is needed to link to the user's account<br><br><br></td>
-  </tr>
- </tbody>
  <thead>
   <tr align="Left"><th colspan="2">Responses</th></tr>
   <tr align="left"><th>Code</th><th>Description</th></tr>
@@ -56,6 +50,10 @@
 </table>
 
 </details>
+	
+<sup>We can say that everything starts with this request. This request creates a user in guest mode, then you can authorize</sup>
+	
+## Authorization
 
 <details>
 <summary>
@@ -147,7 +145,7 @@
 curl "https://mustapp.com/api/acc/apple" \
 	-X PUT \
 	-H 'Bearer: <token>' \
-	-d '{"code":"cd0c7fe25c1d14422843485df675f71b3.0.rwyu.hT8IxyN6M79k7X4vGphlVg","force":false,"app_id":"ru.ayyo.must","name":" "}'
+	-d '{"code":"string","force":false,"app_id":"ru.ayyo.must","name":"string"}'
 ```
  
  </td>
@@ -274,6 +272,8 @@ curl "https://mustapp.com/api/acc/google" \
 </table>
 
 </details>
+	
+## Session
 
 <details>
 <summary>
