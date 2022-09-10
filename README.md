@@ -626,6 +626,125 @@ curl "https://mustapp.com/api/products/{}/streamings"
 
 </details>
 	
+<details>
+<summary>
+<sub> <img src="/methods/get.png" width="50" /></sub> - <i><h4><code>/api/products/{}/watches</code></h4></i> <sub>Get commentaries movie from ID</sub>
+</summary>
+
+<table role="table">
+<thead>
+<tr align="Left"><th colspan="2">Query</th></tr>
+<tr align="left"><th>Parametrs</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>limit</b> <br><code>int</code><br></td>
+   <td>Get a certain number of comments. Standard value is 10<br><br><br></td>
+  </tr>
+  <tr>
+   <td><b>offset</b> <br><code>int</code><br></td>
+   <td>Moving through comments. Default 0<br><br><br></td>
+  </tr>
+  <tr>
+   <td><b>with_reviews</b> <br><code>boolean</code><br></td>
+   <td>Get responses to comments<br><br><br></td>
+  </tr>
+ </tbody>
+<thead>
+<tr align="Left"><th colspan="2">Headers</th></tr>
+<tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+{
+  "watches" : [
+    {
+      "rate" : 0,
+      "watched_at" : "string",
+      "review" : {
+        "reviewed_at" : "string",
+        "body" : "string"
+      },
+      "discussion" : {
+        "discussion_id" : 0,
+        "likes_count" : 0,
+        "replies_count" : 0,
+        "liked" : null
+      },
+      "user" : {
+        "image_uri" : "string",
+        "gender" : "string",
+        "id" : 0,
+        "you_follow" : null,
+        "is_private" : false,
+        "verified" : false,
+        "follows_you" : null,
+        "uri" : "string",
+        "name" : "string"
+      }
+    }
+  ],
+  "query" : null,
+  "offset" : 0,
+  "total" : 0,
+  "limit" : 0
+}
+```
+   
+   </td>
+  </tr>
+  <tr>
+   <td>400<br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Bad Request
+   
+```js
+{
+  "error" : {
+    "message" : "invalid limit provided.",
+    "code" : "invalid_model"
+  }
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/products/14659/watches?limit=10&offset=0&with_reviews=true"
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+	
 ## Authorization
 
 <details>
