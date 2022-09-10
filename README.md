@@ -151,6 +151,92 @@ curl "https://mustapp.com/api/search" \
 </table>
 
 </details>
+
+<details>
+<summary>
+<sub> <img src="/methods/post.png" width="50" /></sub> - <i><h4><code>/api/products</code></h4></i> <sub>Get Datas movies and showes from IDs</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Body</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+
+```js
+{
+  "ids": [
+    0
+  ]
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+[
+  {
+    "trailer_url" : "string",
+    "release_date" : "1970-01-01",
+    "id" : 0,
+    "poster_file_path" : "string",
+    "title" : "string",
+    "items_count" : 0,
+    "subtitle" : null,
+    "runtime" : 0,
+    "type" : "string",
+    "items_released_count" : 0
+  }
+]
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/search" \
+	-X POST \
+	-H 'Content-Type: application/json; charset=utf-8' \
+	-d '{"query":"string","types":["movies","shows","persons","users","genres"]}'
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
 	
 ## Authorization
 
