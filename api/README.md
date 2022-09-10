@@ -1,43 +1,60 @@
 
-<h1> Mustapp API <sup><code>1.0.0</code></sup></h1>
+<h1> Mustapp API </h1><sup><code>1.0.0</code></sup>
 
 <details>
 <summary>
 <sub> <img src="/methods/post.png" width="50" /></sub> - <i><h4><code>/api/acc/anonymous</code></h4></i> <sub>Obtaining a Bearer token.</sub>
 </summary>
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
-
-</details>
-
-<details>
-  <summary>
-    <h4><img src="https://via.placeholder.com/15/881ADF/881ADF.png" /> <b>POST</b> - <i><code>/api/acc/anonymous</code></i> - Obtaining a Bearer token.</h4>
-  </summary>
-  
- ### Request
- 
-  &emsp;&emsp;**POST** ```https://mustapp.com/api/acc/anonymous```
-  
-<h4>Response</h4>
-	
-```js
-{
-"id" : 638737,
-"token" : "token"
-}
-```
-  
-  ### Curl
-  
-  ```curl
-  curl "https://mustapp.com/api/acc/anonymous" \
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br></td>
+   <td>
+   
+   Successful operation
+   
+   ```js
+   {
+    "id" : 0,
+    "token" : "string"
+   }
+   ```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+   curl "https://mustapp.com/api/acc/anonymous" \
 	-X POST
-  ```
-  
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
 </details>
 
 # Account
