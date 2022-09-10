@@ -52,6 +52,105 @@ This API was taken from the Mustapp application. To use requests, you need to sp
 </details>
 	
 <sup>We can say that everything starts with this request. This request creates a user in guest mode, then you can authorize</sup>
+
+## View management
+
+<details>
+<summary>
+<sub> <img src="/methods/post.png" width="50" /></sub> - <i><h4><code>/api/search</code></h4></i> <sub>Search in DB (users, movies, shows, pesons, users, generes).</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for search<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Body</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+
+```js
+{
+  "query": "string",
+  "types": [
+    "movies",
+    "shows",
+    "persons",
+    "users",
+    "genres"
+  ]
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+{
+  "persons" : [
+    0
+  ],
+  "users" : [
+    0
+  ],
+  "genres" : [
+    0
+  ],
+  "movies" : [
+    0
+  ],
+  "shows" : [
+    0
+  ],
+  "products" : [
+    0
+  ]
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/search" \
+	-X POST \
+	-H 'Content-Type: application/json; charset=utf-8' \
+	-d '{"query":"string","types":["movies","shows","persons","users","genres"]}'
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
 	
 ## Authorization
 
