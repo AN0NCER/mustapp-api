@@ -57,6 +57,106 @@
 
 </details>
 
+<details>
+<summary>
+<sub> <img src="/methods/put.png" width="50" /></sub> - <i><h4><code>/api/acc/apple</code></h4></i> <sub>Loggin whith apple ID.</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Body</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+
+```js
+{
+  "app_id": "ru.ayyo.must",
+  "force": false,
+  "code": "string",
+  "name": "string"
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+   <td>
+   
+   Successful operation
+   
+```js
+{
+  "name": null,
+  "phone": null,
+  "facebook_name": null,
+  "facebook_id": null,
+  "twitter_name": null,
+  "twitter_id": null,
+  "is_private": false,
+  "timezone": "string",
+  "has_default_uri": false,
+  "store_country_code": "string",
+  "cinema_country_code": "string",
+  "prefered_language_code": "string",
+  "gender": null,
+  "image_uri": null,
+  "bio_message": null,
+  "links": {},
+  "google_id": null,
+  "google_name": null,
+  "is_youtube_linked": null,
+  "apple_id": "string",
+  "apple_email": "string",
+  "apple_name": null,
+  "id": 0,
+  "uri": "string",
+  "is_anonymous": false
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/acc/apple" \
+	-X PUT \
+	-H 'Bearer: <token>' \
+	-d '{"code":"cd0c7fe25c1d14422843485df675f71b3.0.rwyu.hT8IxyN6M79k7X4vGphlVg","force":false,"app_id":"ru.ayyo.must","name":" "}'
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+
 # Account
 
 <details>
