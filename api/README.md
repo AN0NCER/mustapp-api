@@ -157,6 +157,26 @@ curl "https://mustapp.com/api/acc/apple" \
 
 </details>
 
+<details>
+<summary>
+<sub> <img src="/methods/d-put.png" width="50" /></sub> - <i><h4><code>/api/acc/facebook</code></h4></i> <sub>Loggin whith facebook.</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account<br><br><br></td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+
 # Account
 
 <details>
