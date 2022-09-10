@@ -225,10 +225,125 @@ curl "https://mustapp.com/api/search" \
    <td colspan="2">
    
 ```curl
-curl "https://mustapp.com/api/search" \
+curl "https://mustapp.com/api/products/" \
 	-X POST \
 	-H 'Content-Type: application/json; charset=utf-8' \
-	-d '{"query":"string","types":["movies","shows","persons","users","genres"]}'
+	-H 'Bearer: 0ba41ebd-5df1-4d90-ac0c-b642a9261779' \
+	-d '{"ids":[0]}'
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+	
+<details>
+<summary>
+<sub> <img src="/methods/get.png" width="50" /></sub> - <i><h4><code>/api/products/{}</code></h4></i> <sub>Get Data movie or showes from ID</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+{
+  "movie" : {
+    "reviews_count" : 0,
+    "crew" : [
+      {
+        "roles" : [
+          "string",
+        ],
+        "person" : {
+          "gender" : null,
+          "id" : 0,
+          "related_movies_count" : 0,
+          "related_shows_count" : 0,
+          "overview" : null,
+          "name" : "string",
+          "image_uri" : "string"
+        }
+      }
+    ],
+    "cast" : [
+      {
+        "roles" : [
+          "string",
+        ],
+        "person" : {
+          "gender" : null,
+          "id" : 0,
+          "related_movies_count" : 0,
+          "related_shows_count" : 0,
+          "overview" : null,
+          "name" : "string",
+          "image_uri" : "string"
+        }
+      }
+    ],
+    "soundtrack_url" : null,
+    "overview" : "string",
+    "want_count" : 0,
+    "watch_count" : 0
+  },
+  "youtube" : null,
+  "id" : 0,
+  "poster_file_path" : "string",
+  "subtitle" : null,
+  "items_released_count" : 0,
+  "show" : null,
+  "type" : "movie",
+  "episode" : null,
+  "season" : null,
+  "title" : "string",
+  "trailer_url" : "string",
+  "items_count" : 0,
+  "release_date" : "1970-01-01",
+  "genres" : [
+    0
+  ],
+  "rate" : {
+    "mustapp" : 0,
+    "imdb" : 0,
+    "rotten_tomatoes" : null
+  },
+  "runtime" : 
+}
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/products/{}"
 ```
  
  </td>
