@@ -435,6 +435,196 @@ curl "https://mustapp.com/api/genres" \
 </table>
 
 </details>
+
+<details>
+<summary>
+<sub> <img src="/methods/get.png" width="50" /></sub> - <i><h4><code>/api/products/{}/similars</code></h4></i> <sub>Get similiars movie and shows from ID</sub>
+</summary>
+
+<table role="table">
+<thead>
+<tr align="Left"><th colspan="2">Headers</th></tr>
+<tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+[
+{
+  "trailer_url" : "string",
+  "release_date" : "1970-01-01",
+  "id" : 0,
+  "poster_file_path" : "0",
+  "title" : "string",
+  "items_count" : 0,
+  "subtitle" : null,
+  "runtime" : 0,
+  "type" : "string",
+  "items_released_count" : 0
+}
+]
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/products/{}/similars"
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+
+<details>
+<summary>
+<sub> <img src="/methods/get.png" width="50" /></sub> - <i><h4><code>/api/products/{}/cinemas</code></h4></i> <sub>Get cinemas movie from ID</sub>
+</summary>
+
+<table role="table">
+<thead>
+<tr align="Left"><th colspan="2">Headers</th></tr>
+<tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+[
+]
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/products/{}/cinemas"
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+
+<details>
+<summary>
+<sub> <img src="/methods/get.png" width="50" /></sub> - <i><h4><code>/api/products/{}/streamings</code></h4></i> <sub>Get streamings movie from ID</sub>
+</summary>
+
+<table role="table">
+<thead>
+<tr align="Left"><th colspan="2">Headers</th></tr>
+<tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account. Not required for this<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <td>
+   
+   Successful operation
+   
+```js
+[
+  {
+    "name": "string,
+    "type": "string",
+    "image_uri": "string",
+    "subscription_required": false,
+    "coming_soon": false,
+    "links": [
+      {
+        "type": "string",
+        "url": "string"
+      }
+    ],
+    "link": "string",
+    "price": {
+      "min": 0.0,
+      "max": 0.0,
+      "currency_code": "string"
+    }
+  }
+]
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/products/{}/streamings"
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
 	
 ## Authorization
 
