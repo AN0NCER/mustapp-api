@@ -177,6 +177,104 @@ curl "https://mustapp.com/api/acc/apple" \
 
 </details>
 
+<details>
+<summary>
+<sub> <img src="/methods/put.png" width="50" /></sub> - <i><h4><code>/api/acc/google</code></h4></i> <sub>Loggin whith Google.</sub>
+</summary>
+
+<table role="table">
+ <thead>
+  <tr align="Left"><th colspan="2">Headers</th></tr>
+  <tr align="left"><th>Name</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><b>Bearer</b> <br><code>string</code><br><sup>token</sup></td>
+   <td>A unique token that is needed to link to the user's account<br><br><br></td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Body</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+
+```js
+  {
+    "force": false,
+    "authorization_code": "string"
+  }
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Responses</th></tr>
+  <tr align="left"><th>Code</th><th>Description</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>200<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+   <td>
+   
+   Successful operation
+   
+```js
+{
+    "name": "string",
+    "phone": "string",
+    "facebook_name": null,
+    "facebook_id": null,
+    "twitter_name": null,
+    "twitter_id": null,
+    "is_private": true,
+    "timezone": "string",
+    "has_default_uri": false,
+    "store_country_code": "string",
+    "cinema_country_code": "string",
+    "prefered_language_code": "string",
+    "gender": "string",
+    "image_uri": "string",
+    "bio_message": null,
+    "links": {},
+    "google_id": "string",
+    "google_name": "string",
+    "is_youtube_linked": true,
+    "apple_id": null,
+    "apple_email": null,
+    "apple_name": null,
+    "id": 0,
+    "uri": "string",
+    "is_anonymous": false
+  }
+```
+   
+   </td>
+  </tr>
+ </tbody>
+ <thead>
+  <tr align="Left"><th colspan="2">Curl</th></tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="2">
+   
+```curl
+curl "https://mustapp.com/api/acc/google" \
+	-X PUT \
+	-H 'Bearer: <token>' \
+	-d '{"force":false,"authorization_code":"string"}'
+```
+ 
+ </td>
+  </tr>
+ </tbody>
+</table>
+
+</details>
+
 # Account
 
 <details>
