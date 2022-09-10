@@ -1,10 +1,6 @@
 
 # [Mustapp](https://mustapp.com) API
 
-### Menu
-
-### Request
-
 <details>
   <summary>
     <img src="https://via.placeholder.com/15/881ADF/881ADF.png" /> <b>POST</b> - <i><code>/api/acc/anonymous</code></i> - Obtaining a Bearer token.
