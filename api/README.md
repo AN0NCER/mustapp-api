@@ -99,6 +99,21 @@ curl "https://mustapp.com/api/acc/apple" \
 
 <details>
   <summary>
+    <h4><img src="https://via.placeholder.com/15/1ADFDF/1ADFDF.png" /> <b>PUT</b> - <i><code>/api/acc/facebook</code></i> - Loggin whith facebook.</h4>
+  </summary>
+	
+ ### Request
+ 
+  &emsp;&emsp;**PUT** ```https://mustapp.com/api/acc/facebook```
+	
+### Header
+	
+  - `Bearer: <token>`
+
+</details>
+
+<details>
+  <summary>
     <h4><img src="https://via.placeholder.com/15/1ADFDF/1ADFDF.png" /> <b>PUT</b> - <i><code>/api/acc/google</code></i> - Loggin whith google.</h4>
   </summary>
 	
@@ -158,6 +173,39 @@ curl "https://mustapp.com/api/acc/google" \
 	-X PUT \
 	-H 'Bearer: <token>' \
 	-d '{"force":false,"authorization_code":"4\/0AdQt8qghlCTOq_2eWDs-ft2zTaGI3mGUqNaJXjY6wTVe-LD6B_RqLMYcZiwUlGog93v7Vg"}'
+```
+  
+</details>
+<details>
+  <summary>
+    <h4><img src="https://via.placeholder.com/15/DF1A1A/DF1A1A.png" /> <b>DELETE</b> - <i><code>/api/acc/session</code></i> - Delete session.</h4>
+  </summary>
+	
+ ### Request
+ 
+  &emsp;&emsp;**DELETE** ```https://mustapp.com/api/acc/session```
+	
+### Header
+	
+  - `Bearer: <token>`
+  
+<h4>Body</h4>
+	
+```js
+```
+	
+<h4>Response</h4>
+	
+```js
+204
+```
+  
+  ### Curl
+  
+```curl
+curl "https://mustapp.com/api/acc/session" \
+	-X DELETE \
+	-H 'Bearer: <token>'
 ```
   
 </details>
