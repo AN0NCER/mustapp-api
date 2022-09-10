@@ -1,5 +1,17 @@
 
-# [Mustapp](https://mustapp.com) API
+<h1> Mustapp API <sup><code>1.0.0</code></sup></h1>
+
+<details>
+<summary>
+<sub> <img src="/methods/post.png" width="50" /></sub> - <i><h4><code>/api/acc/anonymous</code></h4></i> <sub>Obtaining a Bearer token.</sub>
+</summary>
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
+</details>
 
 <details>
   <summary>
